@@ -1,0 +1,30 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          gem install jekyll bundler
+          ls
+          cd site ; bundle install
+          ls 
+          cd .. ; npm run bookshop-live
+          ls
+          cd site ; bundle exec jekyll build --trace
+          ls
+          
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: main # The branch the action should deploy to.
+          folder: site/_site # The folder the action should deploy.

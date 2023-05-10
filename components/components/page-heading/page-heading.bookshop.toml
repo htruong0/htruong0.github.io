@@ -1,0 +1,10 @@
+[component]
+structures = [ "content_blocks" ]
+label = "Page Heading"
+description = "Generic page heading"
+icon = "wysiwyg"
+tags = ["Content"]
+
+[props]
+title = "Projects"
+description = "Below you can find some highlights of my research."
