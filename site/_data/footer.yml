@@ -7,5 +7,5 @@ footer_menu__settings:
     - title: 'About Me'
       url: '/about/'
 
-# copyright_text_html: >-
-  # <p> 2021 &copy; <a href="/">Vonge</a>. Template by <a href="https://cloudcannon.com/">CloudCannon</a>.</p>
+copyright_text_html: >-
+  Vonge template by <a href="https://cloudcannon.com/">CloudCannon</a>.</p>
