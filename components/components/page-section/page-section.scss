@@ -1,0 +1,49 @@
+/* Page Section */
+.c-page-section {
+	margin: 0 auto;
+	text-align: left;
+
+	@media only screen and (max-width: $desktop) {
+		padding: 80px 0 60px;
+	}
+
+	@media only screen and (max-width: $tablet) {
+		padding: 40px 0;
+	}
+
+	@media only screen and (max-width: $mobile) {
+		padding: 30px 0;
+	}
+
+	&__title {
+		font-size: 32px;
+		line-height: 1.15;
+
+		@media only screen and (max-width: $tablet) {
+			font-size: 32px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			font-size: 32px;
+		}
+	}
+
+	&__description {
+		padding: 0 0 80px 0;
+		line-height: 2.5;
+
+		@media only screen and (max-width: $mobile) {
+			margin: 24px auto 0;
+		}
+		a {
+			font-weight: 500;
+			border-bottom: 1px solid $border-color;
+			transition: $global-transition;
+	  
+			&:hover {
+			  color: $link-color-hover;
+			  border-color: black;
+			}
+		  }
+	}
+}
